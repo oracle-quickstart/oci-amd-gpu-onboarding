@@ -13,13 +13,13 @@
    git clone https://github.com/oracle-quickstart/oci-amd-gpu-onboarding.git
    cd oci-amd-gpu-onboarding
 ```
-### 2. Create virtual environment names venv_ft
+### 2. Create virtual environment 
 ```bash
-python3 -m venv venv
+python3 -m venv venv_ft
 ```
 ### 3. Activate the virtual enviroment 
 ```bash
-source vnenv/bin/activate
+source vnenv_ft/bin/activate
 ```
 
 ### 4. Install required packages
