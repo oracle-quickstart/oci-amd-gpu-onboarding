@@ -15,8 +15,23 @@ This document provides hardware specifications, supported OS images, onboarding 
 - Primary verification command: `<hello world or device visibility command>`
 - Operational profile: `<single-node, scale-out, topology-sensitive, etc.>`
 
+## When To Use This Shape
+
+Use this shape when you need `<brief workload fit>`.
+
+It is best suited for `<single-node vs scale-out guidance>` and is a strong fit when `<topology, memory, or networking differentiator>`.
+
+## First 15 Minutes
+
+1. Launch the shape with one of the approved images from the [Provided Images](#provided-images) table.
+2. Run the primary verification command and confirm all GPUs are visible.
+3. Run the hello-world or container smoke test from [Hello World Verification](#hello-world-verification).
+4. Confirm the expected RDMA or interconnect interfaces are up before moving on to benchmarks.
+
 # Table of Contents
 * [Hardware Specifications](#hardware-specifications)
+* [When To Use This Shape](#when-to-use-this-shape)
+* [First 15 Minutes](#first-15-minutes)
 * [Recommended Operating Systems](#recommended-operating-systems)
     * [Recommended Software Version](#recommended-software-version)
     * [Custom OS Image Creation with Packer](#custom-os-image-creation-with-packer)

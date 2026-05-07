@@ -21,9 +21,24 @@ Within each node, all 8 MI355X GPUs are connected via AMD XGMI, enabling a symme
 - Primary verification command: `docker pull rocm/pytorch:latest` plus GPU visibility checks
 - Operational profile: `scale-out AI and HPC over Ethernet with Pollara NICs`
 
+## When To Use This Shape
+
+Use this shape when you specifically need the MI355X Pollara networking path for scale-out Ethernet-based AI or HPC workloads.
+
+It is best suited for customers validating Pollara-backed multi-node collective behavior, comparing Pollara against the standard MI355X variant, or standardizing on the OCI-approved Pollara image path.
+
+## First 15 Minutes
+
+1. Launch the shape with the approved Pollara image from the [Provided Images](#provided-images) table.
+2. Pull the ROCm container and verify GPU visibility in [Hello World Verification](#hello-world-verification).
+3. Run `rdma link` and confirm the expected `ionic*` back-end interfaces are up.
+4. Run the first single-node RCCL check before moving into the larger sweep or multi-node validation.
+
 # Table of Contents
 
 * [Hardware Specifications](#hardware-specifications)
+* [When To Use This Shape](#when-to-use-this-shape)
+* [First 15 Minutes](#first-15-minutes)
 * [Recommended Operating Systems](#recommended-operating-systems)
     * [Recommended Software Version](#recommended-software-version)
     * [Custom OS Image Creation with Packer](#custom-os-image-creation-with-packer)

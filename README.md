@@ -18,13 +18,13 @@ This repository hosts onboarding content for Oracle Cloud Infrastructure GPU off
 
 | Vendor | Shape | Guide | Status |
 |--------|-------|-------|--------|
-|NVIDIA | B300 | [README-B300.md](nvidia/B300/README-B300.md) | ✅ Complete |
+| NVIDIA | B300 | [README-B300.md](nvidia/B300/README-B300.md) | ✅ Complete |
 | NVIDIA | GB300 | [README-GB300.md](nvidia/GB300/README-GB300.md) | ✅ Complete |
-| AMD| MI355X | [README-MI355X.md](amd/MI355X/README-MI355X.md) | ✅ Complete |
-| AMD| MI355X (Pollara) | [README-MI355X-Pollara.md](amd/MI355X/README-MI355X-Pollara.md) | ✅ Complete |
-| NVIDIA| B200 | [README-B200.md](nvidia/B200/README-B200.md) | ✅ Complete |
-| NVIDIA| GB200 | [README-GB200.md](nvidia/GB200/README-GB200.md) | ✅ Complete |
-|NVIDIA | H200 | [README-H200.md](nvidia/H200/README-H200.md) | ✅ Complete |
+| AMD | MI355X (Pollara) | [README-MI355X-Pollara.md](amd/MI355X/README-MI355X-Pollara.md) | ✅ Complete |
+| AMD | MI355X | [README-MI355X.md](amd/MI355X/README-MI355X.md) | ✅ Complete |
+| NVIDIA | B200 | [README-B200.md](nvidia/B200/README-B200.md) | ✅ Complete |
+| NVIDIA | GB200 | [README-GB200.md](nvidia/GB200/README-GB200.md) | ✅ Complete |
+| NVIDIA | H200 | [README-H200.md](nvidia/H200/README-H200.md) | ✅ Complete |
 | NVIDIA | H100 | [README-H100.md](nvidia/H100/README-H100.md) | ✅ Complete |
 | AMD | MI300X | [README-MI300X.md](amd/MI300X/README-MI300X.md) | ✅ Complete |
 
