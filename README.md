@@ -20,6 +20,7 @@ This repository hosts onboarding content for Oracle Cloud Infrastructure GPU off
 |--------|-------|-------|--------|
 | NVIDIA | B300 | [README-B300.md](nvidia/B300/README-B300.md) | ✅ Complete |
 | NVIDIA | GB300 | [README-GB300.md](nvidia/GB300/README-GB300.md) | ✅ Complete |
+| NVIDIA | GB300 Multiplanar | [README-GB300-Multiplanar.md](nvidia/GB300/README-GB300-Multiplanar.md) | ✅ Complete |
 | AMD | MI355X (Pollara) | [README-MI355X-Pollara.md](amd/MI355X/README-MI355X-Pollara.md) | ✅ Complete |
 | AMD | MI355X | [README-MI355X.md](amd/MI355X/README-MI355X.md) | ✅ Complete |
 | NVIDIA | B200 | [README-B200.md](nvidia/B200/README-B200.md) | ✅ Complete |
@@ -50,6 +51,7 @@ This repository hosts onboarding content for Oracle Cloud Infrastructure GPU off
         README-GB200.md
     /GB300
         README-GB300.md
+        README-GB300-Multiplanar.md
     /H100
         README-H100.md
     /H200
