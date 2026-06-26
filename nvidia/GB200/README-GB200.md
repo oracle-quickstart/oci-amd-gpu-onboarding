@@ -994,21 +994,21 @@ configuration via OCI web console than use JSON input file:
 
     oci compute-management instance-configuration create --compartment-id ocid1.compartment... --instance-details XXX_JSON_XXX 
 
-**Note:** It is recommended that you create the GMC **with all of the**
-**available hosts** in the fabric. This is necessary to properly size the
-NVLink partition (support for multi-cast) since once the partition is
-created it will not be updated when adding new nodes. The only way to
-update it once it has be created is to delete the GMC and start over or
-idle the workload on the rack and then have OCI update the partition in
-the background.
+When creating a GMC, set `targetSize` at creation time to the maximum
+number of instances you expect to use in that GMC. This sizes the NVLink
+multicast limits for the partition and allows the GMC to grow toward
+`targetSize` as hosts become available or return from repair. For GB200,
+GB200-v2, and GB200-v3, use `targetSize` 18 for each GMC unless your
+deployment plan says otherwise. You do not need an explicit `--size` when
+`targetSize` is set.
 
-Create the GMC.  This will bring up \<size\> instances.  You can use the
-"available-host-count" from the "compute-gpu-memory-fabric list"
-step.  Use the target compartment OCID: 
+Create the GMC. Use the target compartment OCID:
 
     oci compute compute-gpu-memory-cluster create --availability-domain XXX \
     --compartment-id ocid1.compartment... --compute-cluster-id ocid1.computecluster... \
-    --instance-configuration-id XXX --gpu-memory-fabric-id ocid1.computegpumemoryfabric... --size XX    
+    --instance-configuration-id ocid1.instanceconfiguration... \
+    --gpu-memory-fabric-id ocid1.computegpumemoryfabric... \
+    --gpu-memory-cluster-scale-config '{"targetSize":18,"isUpsizeEnabled":true,"isDownsizeEnabled":false}'
 
 To increase the number of instances in an existing GMC set the size
 parameter to the total size you want (it is not an increment to the
@@ -1021,7 +1021,7 @@ termination is used.
 
 To terminate all instances on a GMC and delete the GMC itself:
 
-    oci compute compute-gpu-memory-cluster delete --compute-gpu-memory-cluster-id ocid1.computecluster.oc1....
+    oci compute compute-gpu-memory-cluster delete --compute-gpu-memory-cluster-id ocid1.computegpumemorycluster.oc1....
 
 #### IMEX
 
